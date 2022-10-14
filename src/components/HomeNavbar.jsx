@@ -1,10 +1,8 @@
 // eslint-disable-next-line react/prop-types
 function HomeNavbar({ cellCount, setCellCount }) {
   return (
-    <nav className="sticky top-0 py-3 bg-slate-800 text-white flex justify-center z-10">
-      <label
-        htmlFor="steps-range"
-        className="text-base font-medium text-gray-900 dark:text-gray-300">
+    <nav className="sticky top-0 py-3 bg-slate-800 flex justify-center z-10">
+      <label htmlFor="steps-range" className="text-base font-medium text-gray-300">
         Reel Symbols {cellCount} &nbsp;
         <input
           id="steps-range"
