@@ -32,7 +32,7 @@ function App() {
   }, [])
 
   return (
-    <div className="flex flex-col min-h-screen min-w-screen pb-[48px] bg-slate-700">
+    <div className="flex flex-col min-h-screen w-full pb-[48px] bg-slate-700 overflow-hidden">
       <HomeNavbar cellCount={cellCount} setCellCount={setCellCount} />
       <div className="flex flex-row portrait:flex-col justify-center my-auto">
         <div className="flex flex-col">
