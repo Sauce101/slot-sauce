@@ -12,17 +12,20 @@
   ],
   "overrides": [],
   "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "no-unused-vars": "warn",
     "semi": 0,
+    "comma-dangle": 0,
+    "no-unused-vars": "warn",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "no-console": "off",
-    "comma-dangle": ["error", "never"]
+    "no-console": "off"
   }
 }

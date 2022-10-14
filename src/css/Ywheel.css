@@ -43,6 +43,10 @@ body {
 
 .carousel__cell:nth-child(9n + 1) {
   background: hsla(0, 100%, 50%, 0.8);
+  /* background-color: white;
+  background-image: url('../assets/images/slot7.svg');
+  background-repeat: no-repeat;
+  background-position: center; */
 }
 .carousel__cell:nth-child(9n + 2) {
   background: hsla(40, 100%, 50%, 0.8);
