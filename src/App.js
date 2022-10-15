@@ -35,15 +35,9 @@ function App() {
     <div className="flex flex-col min-h-screen w-full pb-[48px] bg-slate-700 overflow-hidden">
       <HomeNavbar cellCount={cellCount} setCellCount={setCellCount} />
       <div className="flex flex-row portrait:flex-col justify-center items-center my-auto">
-        <div className="flex flex-col">
-          <Zwheel rng={rng} cellCount={cellCount} isHorizontal={isHorizontal} />
-        </div>
-        <div className="flex flex-col">
-          <Zwheel rng={rng} cellCount={cellCount} isHorizontal={isHorizontal} />
-        </div>
-        <div className="flex flex-col">
-          <Zwheel rng={rng} cellCount={cellCount} isHorizontal={isHorizontal} />
-        </div>
+        <Zwheel rng={rng} cellCount={cellCount} isHorizontal={isHorizontal} />
+        <Zwheel rng={rng} cellCount={cellCount} isHorizontal={isHorizontal} />
+        <Zwheel rng={rng} cellCount={cellCount} isHorizontal={isHorizontal} />
       </div>
       <Footer handleRng={handleRng} />
     </div>
