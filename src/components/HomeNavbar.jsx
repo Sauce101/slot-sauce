@@ -19,17 +19,3 @@ function HomeNavbar({ cellCount, setCellCount }) {
   )
 }
 export default HomeNavbar
-
-/* <label htmlFor="cells">
-        Symbols &nbsp;
-        <input
-          className="cells-range align-middle"
-          type="range"
-          min="3"
-          max="15"
-          value={cellCount}
-          id="cells"
-          onChange={(e) => setCellCount(e.target.value)}
-        />
-        &nbsp; {cellCount}
-      </label> */

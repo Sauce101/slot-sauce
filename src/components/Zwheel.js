@@ -1,16 +1,12 @@
 import { useState, useEffect, useRef, useLayoutEffect } from 'react'
-// import symbols from './symbols'
 import symbols2 from './symbols2'
 
 // eslint-disable-next-line react/prop-types
 function Zwheel({ isHorizontal, rng, cellCount }) {
   const carousel = useRef(null)
   const refs = useRef([])
-  const cells = []
-  // const [cellCount, setCellCount] = useState(9)
+  const cells = refs.current.map((value) => value)
   const [selectedIndex, setSelectedIndex] = useState(null)
-  // const [isHorizontal, setIsHorizontal] = useState(false)
-  // const isHorizontal = false
   const [width, setWidth] = useState(0)
   const [height, setHeight] = useState(0)
   let rotateFn = isHorizontal ? 'rotateY' : 'rotateX'
@@ -25,20 +21,7 @@ function Zwheel({ isHorizontal, rng, cellCount }) {
 
   useEffect(() => {
     setSelectedIndex(selectedIndex + randomNumberInRange(2, 6))
-    // setSelectedIndex(selectedIndex + 1)
   }, [rng])
-
-  // eslint-disable-next-line no-restricted-syntax
-  for (const value of refs.current) {
-    cells.push(value)
-  }
-
-  useLayoutEffect(() => {
-    // eslint-disable-next-line no-restricted-syntax
-    for (const value of refs.current) {
-      cells.push(value)
-    }
-  }, [])
 
   useLayoutEffect(() => {
     setWidth(carousel.current.offsetWidth)
@@ -47,7 +30,6 @@ function Zwheel({ isHorizontal, rng, cellCount }) {
   }, [])
 
   useEffect(() => {
-    // cellCount = cellsRange
     theta = 360 / cellCount
     rotateFn = isHorizontal ? 'rotateY' : 'rotateX'
     const angle = theta * selectedIndex * -1
@@ -63,8 +45,6 @@ function Zwheel({ isHorizontal, rng, cellCount }) {
     theta = 360 / cellCount
     const cellSize = isHorizontal ? width : height
     radius = Math.round(cellSize / 2 / Math.tan(Math.PI / cellCount))
-    // console.log('Helo')
-    // console.log(cells.length)
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < cells.length; i++) {
       const cell = cells[i]
@@ -87,33 +67,12 @@ function Zwheel({ isHorizontal, rng, cellCount }) {
   // set initials
   onOrientationChange()
 
-  // const increment = () => {
-  //   setSelectedIndex(selectedIndex + 1)
-  //   console.log('Increment')
-  // }
-  // const decrement = () => {
-  //   setSelectedIndex(selectedIndex - 1)
-  //   console.log('Decrement')
-  // }
-
-  // const horiz = () => {
-  //   setIsHorizontal(true)
-  //   console.log('Horizontal True')
-  //   changeCarousel()
-  // }
-  // const verti = () => {
-  //   setIsHorizontal(false)
-  //   console.log('Horizontal False')
-  //   changeCarousel()
-  // }
-
   return (
-    <div className="scene mx-auto">
+    <div className="scene">
       <div className="carousel" ref={carousel}>
         {symbols2.map((c, index) => (
           <div
-            // eslint-disable-next-line react/no-array-index-key
-            key={index}
+            key={c.id}
             className={`carousel__cell flex bg-white ${c.transform}`}
             ref={(element) => {
               refs.current[index] = element

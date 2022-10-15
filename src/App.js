@@ -6,8 +6,8 @@ import './css/Zwheel.css'
 
 function App() {
   const [isHorizontal, setIsHorizontal] = useState(null)
+  const [cellCount, setCellCount] = useState(7)
   const [rng, setRng] = useState(false)
-  const [cellCount, setCellCount] = useState(9)
 
   const mql = window.matchMedia('(orientation: portrait)')
 
@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen w-full pb-[48px] bg-slate-700 overflow-hidden">
       <HomeNavbar cellCount={cellCount} setCellCount={setCellCount} />
-      <div className="flex flex-row portrait:flex-col justify-center my-auto">
+      <div className="flex flex-row portrait:flex-col justify-center items-center my-auto">
         <div className="flex flex-col">
           <Zwheel rng={rng} cellCount={cellCount} isHorizontal={isHorizontal} />
         </div>

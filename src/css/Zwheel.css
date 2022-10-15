@@ -1,22 +1,10 @@
-/* * {
-  box-sizing: border-box;
-} */
-
-/* body {
-  font-family: sans-serif;
-  text-align: center;
-} */
-
 .scene {
   border: 1px solid #ccc;
-  /* margin: 40px 0; */
   position: relative;
   width: 210px;
   height: 140px;
-  /* margin: 80px auto; */
-  /* margin: 120px auto; */
-  /* perspective: 340px; */
-  perspective: 600px;
+  perspective: 1500px;
+  /* perspective: 600px; */
 }
 
 .carousel {
@@ -26,7 +14,6 @@
   transform: translateZ(-288px);
   transform-style: preserve-3d;
   transition: transform 1s;
-  /* transition: transform 2.8s; */
   transition-timing-function: ease-in-out;
 }
 
@@ -43,14 +30,5 @@
   color: white;
   text-align: center;
   transition: transform 1s, opacity 1s;
-  /* backface-visibility: hidden; */
-}
-
-.carousel-options {
-  /* margin-top: 80px; */
-  text-align: center;
-  position: relative;
-  /* z-index: 2; */
-  background: hsla(0, 0%, 100%, 0.8);
-  margin-top: auto;
+  backface-visibility: hidden;
 }
