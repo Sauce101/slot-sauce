@@ -14,8 +14,6 @@ function Zwheel({ isHorizontal, rng, cellCount }) {
   let theta
   let cellAngle
 
-  console.log(isHorizontal)
-
   function randomNumberInRange(min, max) {
     // 👇️ get number between min (inclusive) and max (inclusive)
     return Math.floor(Math.random() * (max - min + 1)) + min
@@ -89,7 +87,7 @@ function Zwheel({ isHorizontal, rng, cellCount }) {
 
 Zwheel.propTypes = {
   isHorizontal: PropTypes.bool.isRequired,
-  cellCount: PropTypes.number.isRequired,
+  cellCount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   rng: PropTypes.bool.isRequired,
 }
 export default Zwheel

@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 
 function HomeNavbar({ cellCount, setCellCount }) {
+  console.log(cellCount)
+  console.log(setCellCount)
   return (
     <nav className="sticky top-0 py-3 bg-slate-800 flex justify-center z-10">
       <label htmlFor="steps-range" className="text-base font-medium text-center text-gray-300">
@@ -8,10 +10,10 @@ function HomeNavbar({ cellCount, setCellCount }) {
         <input
           id="steps-range"
           type="range"
-          min="3"
-          max="15"
+          min={3}
+          max={15}
           value={cellCount}
-          step="1"
+          step={1}
           onChange={(e) => setCellCount(e.target.value)}
           className="w-full h-3 rounded-lg appearance-none cursor-pointer bg-gray-700"
         />
@@ -21,7 +23,7 @@ function HomeNavbar({ cellCount, setCellCount }) {
 }
 
 HomeNavbar.propTypes = {
-  cellCount: PropTypes.number.isRequired,
+  cellCount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   setCellCount: PropTypes.func.isRequired,
 }
 
