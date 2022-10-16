@@ -1,11 +1,9 @@
-// eslint-disable-next-line react/prop-types
+import PropTypes from 'prop-types'
+
 function Footer({ handleRng }) {
   return (
     <footer className="bg-gray-200 text-center fixed left-0 right-0 bottom-0 flex justify-center">
-      <div className="text-gray-700 text-center p-3 font-exo font-normal">
-        © 2022 Michael Saucedo
-      </div>
-      {/* <div className="text-gray-700 p-3 font-normal">© 2022 Michael Saucedo</div> */}
+      <div className="text-gray-700 text-center p-3 font-normal">© 2022 Michael Saucedo</div>
       <button
         type="button"
         onClick={handleRng}
@@ -15,4 +13,9 @@ function Footer({ handleRng }) {
     </footer>
   )
 }
+
+Footer.propTypes = {
+  handleRng: PropTypes.func.isRequired,
+}
+
 export default Footer

@@ -5,7 +5,7 @@ import Zwheel from './components/Zwheel'
 import './css/Zwheel.css'
 
 function App() {
-  const [isHorizontal, setIsHorizontal] = useState(null)
+  const [isHorizontal, setIsHorizontal] = useState(false)
   const [cellCount, setCellCount] = useState(7)
   const [rng, setRng] = useState(false)
 

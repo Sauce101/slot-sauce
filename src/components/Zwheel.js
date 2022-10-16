@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useLayoutEffect } from 'react'
+import PropTypes from 'prop-types'
 import symbols2 from './symbols2'
 
-// eslint-disable-next-line react/prop-types
 function Zwheel({ isHorizontal, rng, cellCount }) {
   const carousel = useRef(null)
   const refs = useRef([])
@@ -13,6 +13,8 @@ function Zwheel({ isHorizontal, rng, cellCount }) {
   let radius
   let theta
   let cellAngle
+
+  console.log(isHorizontal)
 
   function randomNumberInRange(min, max) {
     // 👇️ get number between min (inclusive) and max (inclusive)
@@ -83,5 +85,11 @@ function Zwheel({ isHorizontal, rng, cellCount }) {
       </div>
     </div>
   )
+}
+
+Zwheel.propTypes = {
+  isHorizontal: PropTypes.bool.isRequired,
+  cellCount: PropTypes.number.isRequired,
+  rng: PropTypes.bool.isRequired,
 }
 export default Zwheel

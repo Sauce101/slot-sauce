@@ -1,4 +1,5 @@
-// eslint-disable-next-line react/prop-types
+import PropTypes from 'prop-types'
+
 function HomeNavbar({ cellCount, setCellCount }) {
   return (
     <nav className="sticky top-0 py-3 bg-slate-800 flex justify-center z-10">
@@ -18,4 +19,10 @@ function HomeNavbar({ cellCount, setCellCount }) {
     </nav>
   )
 }
+
+HomeNavbar.propTypes = {
+  cellCount: PropTypes.number.isRequired,
+  setCellCount: PropTypes.func.isRequired,
+}
+
 export default HomeNavbar
