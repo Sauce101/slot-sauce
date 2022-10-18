@@ -10,7 +10,7 @@ import diamond from '../assets/images/diamond-512.png'
 import horseshoe from '../assets/images/horseshoe-512.png'
 // import orange from '../assets/images/orange-512.png'
 import seven from '../assets/images/seven-512.png'
-import star from '../assets/images/star-512.png'
+// import star from '../assets/images/star-512.png'
 import watermelon from '../assets/images/watermelon-512.png'
 // import win from '../assets/images/win-512.png'
 
@@ -73,7 +73,7 @@ const symbols2 = [
     id: 12,
   },
   {
-    src: star,
+    src: bar,
     id: 13,
   },
   {

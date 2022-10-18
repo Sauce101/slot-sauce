@@ -20,7 +20,9 @@ function Zwheel({ isHorizontal, rng, cellCount }) {
   }
 
   useEffect(() => {
-    setSelectedIndex(selectedIndex + randomNumberInRange(2, 6))
+    return cellCount < 8
+      ? setSelectedIndex(selectedIndex + randomNumberInRange(2, 6))
+      : setSelectedIndex(selectedIndex + randomNumberInRange(6, 14))
   }, [rng])
 
   useLayoutEffect(() => {
