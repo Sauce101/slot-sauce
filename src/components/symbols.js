@@ -18,73 +18,72 @@ const symbols = [
   {
     transform: 'rotateY(0deg) translateZ(288px)',
     src: seven,
+    id: 1,
   },
   {
     transform: 'rotateY(40deg) translateZ(288px)',
     src: bar,
+    id: 2,
   },
   {
     transform: 'rotateY(80deg) translateZ(288px)',
     src: bell,
+    id: 3,
   },
   {
     transform: 'rotateY(120deg) translateZ(288px)',
     src: cherries,
+    id: 4,
   },
   {
     transform: 'rotateY(160deg) translateZ(288px)',
     src: clover,
+    id: 5,
   },
   {
     transform: 'rotateY(200deg) translateZ(288px)',
     src: watermelon,
+    id: 6,
   },
   {
     transform: 'rotateY(240deg) translateZ(288px)',
     src: crown,
+    id: 7,
   },
   {
     transform: 'rotateY(280deg) translateZ(288px)',
     src: diamond,
+    id: 8,
   },
   {
     transform: 'rotateY(320deg) translateZ(288px)',
     src: grapes,
+    id: 9,
   },
   {
     src: horseshoe,
+    id: 10,
   },
   {
     src: orange,
+    id: 11,
   },
   {
     src: apple,
+    id: 12,
   },
   {
     src: star,
+    id: 13,
   },
   {
     src: coin,
+    id: 14,
   },
   {
     src: win,
+    id: 15,
   },
 ]
 
 export default symbols
-
-// apple,
-//   bar,
-//   bell,
-//   cherries,
-//   clover,
-//   coin,
-//   crown,
-//   diamond,
-//   grapes,
-//   horseshoe,
-//   orange,
-//   seven,
-//   star,
-//   watermelon,
-//   win,

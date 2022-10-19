@@ -8,6 +8,7 @@ function App() {
   const [isHorizontal, setIsHorizontal] = useState(false)
   const [cellCount, setCellCount] = useState(7)
   const [rng, setRng] = useState(false)
+  const [rngReverse, setRngReverse] = useState(false)
 
   const mql = window.matchMedia('(orientation: portrait)')
 
@@ -22,6 +23,9 @@ function App() {
   const handleRng = () => {
     setRng(!rng)
   }
+  const handleRngReverse = () => {
+    setRngReverse(!rngReverse)
+  }
 
   useEffect(() => {
     if (mql.matches) {
@@ -35,11 +39,26 @@ function App() {
     <div className="flex flex-col min-h-screen w-full pb-[48px] bg-slate-700 overflow-hidden">
       <HomeNavbar cellCount={cellCount} setCellCount={setCellCount} />
       <div className="flex flex-row portrait:flex-col justify-center items-center my-auto">
-        <Zwheel rng={rng} cellCount={cellCount} isHorizontal={isHorizontal} />
-        <Zwheel rng={rng} cellCount={cellCount} isHorizontal={isHorizontal} />
-        <Zwheel rng={rng} cellCount={cellCount} isHorizontal={isHorizontal} />
+        <Zwheel
+          rng={rng}
+          rngReverse={rngReverse}
+          cellCount={cellCount}
+          isHorizontal={isHorizontal}
+        />
+        <Zwheel
+          rng={rng}
+          rngReverse={rngReverse}
+          cellCount={cellCount}
+          isHorizontal={isHorizontal}
+        />
+        <Zwheel
+          rng={rng}
+          rngReverse={rngReverse}
+          cellCount={cellCount}
+          isHorizontal={isHorizontal}
+        />
       </div>
-      <Footer handleRng={handleRng} />
+      <Footer handleRng={handleRng} handleRngReverse={handleRngReverse} />
     </div>
   )
 }

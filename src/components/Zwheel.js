@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types'
 import symbols2 from './symbols2'
 
-function Zwheel({ isHorizontal, rng, cellCount }) {
+function Zwheel({ isHorizontal, rng, rngReverse, cellCount }) {
   const carousel = useRef(null)
   const refs = useRef([])
   const cells = refs.current.map((value) => value)
@@ -24,6 +24,11 @@ function Zwheel({ isHorizontal, rng, cellCount }) {
       ? setSelectedIndex(selectedIndex + randomNumberInRange(2, 6))
       : setSelectedIndex(selectedIndex + randomNumberInRange(6, 14))
   }, [rng])
+  useEffect(() => {
+    return cellCount < 8
+      ? setSelectedIndex(selectedIndex + randomNumberInRange(-2, -6))
+      : setSelectedIndex(selectedIndex + randomNumberInRange(-6, -14))
+  }, [rngReverse])
 
   useLayoutEffect(() => {
     setWidth(carousel.current.offsetWidth)
@@ -91,5 +96,6 @@ Zwheel.propTypes = {
   isHorizontal: PropTypes.bool.isRequired,
   cellCount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   rng: PropTypes.bool.isRequired,
+  rngReverse: PropTypes.bool.isRequired,
 }
 export default Zwheel
