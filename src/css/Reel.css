@@ -4,7 +4,6 @@
   width: 210px;
   height: 140px;
   perspective: 1500px;
-  /* perspective: 600px; */
 }
 
 .carousel {
@@ -13,7 +12,7 @@
   position: absolute;
   transform: translateZ(-288px);
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: transform 1.4s;
   transition-timing-function: ease-in-out;
 }
 
