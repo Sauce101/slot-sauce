@@ -6,16 +6,16 @@ function Footer({ handleRng, handleRngReverse }) {
       <button
         type="button"
         onClick={handleRngReverse}
-        className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-2 border border-slate-900">
+        className="bg-slate-800 hover:bg-slate-700 text-white font-bold p-3 border border-slate-900">
         SPIN
       </button>
-      <div className="text-gray-700 text-center p-3 font-normal text-base">
+      <div className="text-gray-700 text-center p-3 font-normal text-base border border-slate-900 w-full">
         © 2022 Michael Saucedo
       </div>
       <button
         type="button"
         onClick={handleRng}
-        className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-2 border border-slate-900">
+        className="bg-slate-800 hover:bg-slate-700 text-white font-bold p-3 border border-slate-900">
         SPIN
       </button>
     </footer>
